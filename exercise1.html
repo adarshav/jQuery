@@ -1,0 +1,37 @@
+<!-- 1.use mouse, keyboard events on paragraph and div elements for document for document/window events in input elements -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script src='./js/jquery-3.3.1.min.js'></script>
+    <script>
+        $(document).ready(function() {
+            $("p").click(function() {
+                $(this).hide();
+            });
+            $("h3").dblclick(function() {
+                $(this).hide();
+            });
+           //mouse events 
+            $("#p1").mouseenter(function() {
+                alert("you have hovered the mouse on paragraph")
+            });
+
+            $("#p2").mousedown(function() {
+                alert("you are in p2");
+            })
+            $("#p3").mouseup(function() {
+                alert("MouseUp");
+            })
+        });
+    </script>
+</head>
+<body>
+    <p>click me once please</p>
+    <h3>double click here </h3>
+    <p id="p1">MouseEnter</p>
+    <p id="p2">mouseDown</p>
+    <p id="p3">MouseUp</p>
+</body>
+</html>
