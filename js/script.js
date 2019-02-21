@@ -38,8 +38,84 @@
 // })
 
 //Animations
+// $(document).ready(function() {
+//     $(".green-box").animate({
+//         "margin-left": "+=200px"
+//     }, 2000, "swing");
+//     $(".green-box").animate({
+//         "margin-left": "-=200px"
+//     }, 2000, "swing");
+//     $(".red-box").animate({
+//         "margin-bottom": "+=300px"
+//     }, 2000, "swing");
+//     //back to the poosition
+//     $(".red-box").animate({
+//         "margin-down": "-=300px"
+//     }, 3000, "swing");
+//     $(".blue-box").animate({
+//         "margin-left": "+=100px"
+//     }, 3000, "swing");
+//     //blue-box back to the position
+//     $(".blue-box").animate({
+//         "margin-left": "-=100px"
+//     }, 2000, "swing");
+// })
+
+//Another level animations
+// $(document).ready(function() {
+//     $(".green-box").animate({
+//         "margin-left": "200px",
+//         "opacity": 0,
+//         "height": 50,
+//         "width": 50,
+//         "margin-top": "25px"
+//     }, 2000)
+//     $("#p1").animate({
+//         "font-size":"25px"
+//     }, 2000);
+// })
+
+//delays and chaining
+// $(document).ready(function() {
+//     $(".red-box").delay(1000).fadeOut(3000).fadeToggle(2000);
+//     $(".green-box").fadeOut(2000);
+// })
+
+//another way of delays [callback functions]
+//if we want to execute the particular function after executing the other we can use callback functions
+//whatever i have learnt the animations till now can be applied using callback functions
+// $(document).ready(function() {
+//     $(".red-box").fadeTo(1000, 0, function() {
+//         //alert("this is a callback function");
+//         $(".blue-box").fadeTo(1000, 0, function() {
+//             $(".green-box").fadeTo(1000, 0);
+//         })
+//     })
+// })
+
+//lightbox
+// $(document).ready(function() {
+//     $(".lightbox").fadeIn(1000);
+// })
+
+//using css selectors
+// $(document).ready(function() {
+    // $("p").css("background-color", "blue");
+    // $("input[type = 'text']").css("background-color", "silver");
+    // $("h2, p, input").css("background-color", "orange");
+    //one way of doing is the above mentioned, the other
+    // $("p:first").css("font-size", "25px");
+    // $("li:last").css("color", "orange");
+//     $("li:even").css("color", "orange"); 
+// })
+
+//jQuery methods for traversal
 $(document).ready(function() {
-    $(".green-box").animate({
-        "margin-left": "+=200px"
-    }, 2000, "swing");
+    //all the below acts as find method
+    // $("#list").find("li").css("color", "blue");
+    // $("#list").children("li").css("color", "blue");
+    // $("#list").parents("div").css("background-color", "gold");
+    // $("#list").parents("body").css("background-color", "gold");//parents can be many 
+    $("#list").parent().css("background-color", "green");
+
 })

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-git.js"></script>
+<script>
+    $(document).ready(function(){ 
+    $('#button1').click(function(){ 
+    $("#myTable").find("tr:gt(0)").remove();
+  });
+});
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Delete all table rows except first one using jQuery.</title>
+</head>
+<body>
+<table border="1" id="myTable">
+<tr>
+<th>Name</th>
+<th>Salary</th>
+</tr>
+<tr>
+<td>Bharath</td>
+<td>45000</td>
+</tr>
+<tr>
+<td>Rakshith</td>
+<td>50000</td>
+</tr>
+<tr>
+<td>Lakshman</td>
+<td>40000</td>
+</tr>
+</table>
+<p>
+<input id="button1" type="button" value="Click to remove all rows except first one"/></p>
+</body>
+</html>
